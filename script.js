@@ -197,8 +197,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
       Use "npx serve ." or VS Code Live Server for local testing.
    ============================================================ */
 
-// REPLACE_WITH_YOUR_EMAIL — swap this with your real email address.
-var FORM_EMAIL = 'REPLACE_WITH_YOUR_EMAIL';
+var FORM_EMAIL = 'lionel.goh@redbeaconam.com';
 
 (function initForm() {
   var form       = document.getElementById('enquiry-form');
