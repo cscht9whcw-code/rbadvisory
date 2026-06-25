@@ -32,6 +32,7 @@ script.js                   # Four IIFEs: navbar, smooth scroll, IntersectionObs
 - **Scroll-reveal animations** — IntersectionObserver fades/slides all `.reveal` elements into view
 - **Sticky navbar** — hamburger menu on mobile, gold CTA button on desktop
 - **Responsive** — mobile-first, breakpoints at 580 px / 768 px / 900 px / 1024 px
+- **WhatsApp chat widget** — fixed floating button (bottom-right) with pre-filled suggestive query chips that open WhatsApp directly
 - **Accessible** — ARIA labels, keyboard focus, `prefers-reduced-motion` respected
 
 ## Running Locally

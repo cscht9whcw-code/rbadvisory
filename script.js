@@ -314,3 +314,67 @@ var FORM_EMAIL = 'lionel.goh@redbeaconam.com';
     });
   });
 }());
+
+/* ============================================================
+   WHATSAPP WIDGET
+   ============================================================ */
+(function () {
+  var WA_NUMBER = '6597285353';
+
+  var fab    = document.getElementById('wa-fab');
+  var panel  = document.getElementById('wa-panel');
+  var badge  = document.getElementById('wa-badge');
+  var closeBtn = document.getElementById('wa-close-btn');
+  var iconOpen  = fab.querySelector('.wa-icon-open');
+  var iconClose = fab.querySelector('.wa-icon-close');
+
+  function openPanel() {
+    panel.hidden = false;
+    badge.hidden = true;
+    fab.setAttribute('aria-expanded', 'true');
+    iconOpen.style.display  = 'none';
+    iconClose.style.display = '';
+    closeBtn.focus();
+  }
+
+  function closePanel() {
+    panel.hidden = true;
+    fab.setAttribute('aria-expanded', 'false');
+    iconOpen.style.display  = '';
+    iconClose.style.display = 'none';
+    fab.focus();
+  }
+
+  fab.addEventListener('click', function () {
+    if (panel.hidden) {
+      openPanel();
+    } else {
+      closePanel();
+    }
+  });
+
+  closeBtn.addEventListener('click', closePanel);
+
+  // Suggestion chips → open WhatsApp with pre-filled message
+  document.querySelectorAll('.wa-suggestion-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var msg = btn.getAttribute('data-msg') || '';
+      var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  // Close panel on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) closePanel();
+  });
+
+  // Close panel on outside click
+  document.addEventListener('click', function (e) {
+    if (!panel.hidden &&
+        !panel.contains(e.target) &&
+        !fab.contains(e.target)) {
+      closePanel();
+    }
+  });
+}());
