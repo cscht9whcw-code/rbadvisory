@@ -33,6 +33,9 @@ script.js                   # Four IIFEs: navbar, smooth scroll, IntersectionObs
 - **Sticky navbar** — hamburger menu on mobile, gold CTA button on desktop
 - **Responsive** — mobile-first, breakpoints at 580 px / 768 px / 900 px / 1024 px
 - **WhatsApp chat widget** — fixed floating button (bottom-right) with pre-filled suggestive query chips that open WhatsApp directly
+- **Social media links** — LinkedIn, X, and Facebook icon links in footer (placeholder hrefs — update with real profile URLs)
+- **Social share strip** — LinkedIn, X, Facebook, and email share buttons just above the footer (plain anchor tags, no SDK)
+- **SEO** — Open Graph tags, Twitter/X Card, JSON-LD `FinancialService` structured data, canonical tag, inline SVG favicon, DNS prefetch
 - **Accessible** — ARIA labels, keyboard focus, `prefers-reduced-motion` respected
 
 ## Running Locally
